@@ -74,8 +74,22 @@ strategies = {
     "zero_shot": setupSqlScript + commonSqlOnlyRequest,
     "single_domain_double_shot": (
         setupSqlScript
-        + " Who doesn't have a way for us to text them? "
-        + " \nSELECT p.person_id, p.name\nFROM person p\nLEFT JOIN phone ph ON p.person_id = ph.person_id AND ph.can_recieve_sms = 1\nWHERE ph.phone_id IS NULL;\n "
+        + " Example question: Which vegan menu items in Albuquerque cost less than $15? "
+        + "Example SQL: SELECT r.name AS restaurant_name, i.name AS item_name, i.dollar_price "
+        + "FROM Restaurant r JOIN Location l ON l.restaurant_id = r.restaurant_id "
+        + "JOIN Menu m ON m.restaurant_id = r.restaurant_id "
+        + "JOIN Item i ON i.menu_id = m.menu_id "
+        + "WHERE l.city = 'Albuquerque' AND l.state_code = 'NM' "
+        + "AND i.vegan_type = 'vegan' AND i.dollar_price < 15 "
+        + "ORDER BY i.dollar_price; "
+        + "Second example question: Which Albuquerque restaurants have the most reviews? "
+        + "Example SQL: SELECT r.name AS restaurant_name, COUNT(rv.review_id) AS review_count, "
+        + "ROUND(AVG(rv.stars), 2) AS average_rating "
+        + "FROM Restaurant r JOIN Location l ON l.restaurant_id = r.restaurant_id "
+        + "JOIN Review rv ON rv.location_id = l.location_id "
+        + "WHERE l.city = 'Albuquerque' AND l.state_code = 'NM' "
+        + "GROUP BY r.restaurant_id, r.name "
+        + "ORDER BY review_count DESC, average_rating DESC LIMIT 1. "
         + commonSqlOnlyRequest
     ),
     # TODO add strategies as descirbed in the paper (multi-domain)
@@ -84,6 +98,10 @@ strategies = {
 questions = [
     # Approximate home coordinates for Albuquerque, New Mexico.
     "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). Which restaurants within about 10 miles have vegan menu items, and what are those items and prices?",
+    "Which Italian restaurant in Albuquerque has the highest average review rating? Include its review count and average stars.",
+    "Which vegan menu items in Albuquerque have reviews? Show the restaurant, item, average star rating, and number of reviews.",
+    "What are the three most reviewed restaurants in Albuquerque, and what is each restaurant's average rating?",
+    "Which restaurant's longitude tastes the most like a vegan song, and how many stars does its latitude have?",
     # "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). What are some highly rated places nearby with vegan food? Include each restaurant's name, vegan items, prices, and average review rating.",
     # "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). Which Italian restaurants are nearby, and which has the highest average review rating?",
     # "What is the highest-rated restaurant in Albuquerque, New Mexico? Show its name, cuisine, average star rating, and number of reviews.",
