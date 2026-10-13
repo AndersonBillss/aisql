@@ -84,17 +84,17 @@ strategies = {
 questions = [
     # Approximate home coordinates for Albuquerque, New Mexico.
     "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). Which restaurants within about 10 miles have vegan menu items, and what are those items and prices?",
-    "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). What are some highly rated places nearby with vegan food? Include each restaurant's name, vegan items, prices, and average review rating.",
-    "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). Which Italian restaurants are nearby, and which has the highest average review rating?",
-    "What is the highest-rated restaurant in Albuquerque, New Mexico? Show its name, cuisine, average star rating, and number of reviews.",
-    "Which restaurants in Albuquerque have vegan items that cost less than $15? List the restaurant, item, and price.",
-    "Which nearby restaurants have spicy vegan menu items? Include the item name, restaurant name, and price.",
-    "Which restaurants in Albuquerque have an average review rating of at least 4 stars? Sort them from highest to lowest rating.",
-    "What are the five most reviewed restaurants in Albuquerque, New Mexico, and what are their average ratings?",
-    "Which Italian menu items have the highest review ratings in Albuquerque? Include their restaurants and prices.",
-    "Show the restaurants near my Albuquerque location that have both vegan and vegetarian menu options.",
-    "Which restaurants in Albuquerque have the lowest-priced vegan menu item, and what is that item?",
-    "What do reviewers say about the vegan menu items at restaurants near Albuquerque, New Mexico? Include the restaurant, item, review title, and star rating.",
+    # "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). What are some highly rated places nearby with vegan food? Include each restaurant's name, vegan items, prices, and average review rating.",
+    # "I live in Albuquerque, New Mexico (approximately latitude 35.0844, longitude -106.6504). Which Italian restaurants are nearby, and which has the highest average review rating?",
+    # "What is the highest-rated restaurant in Albuquerque, New Mexico? Show its name, cuisine, average star rating, and number of reviews.",
+    # "Which restaurants in Albuquerque have vegan items that cost less than $15? List the restaurant, item, and price.",
+    # "Which nearby restaurants have spicy vegan menu items? Include the item name, restaurant name, and price.",
+    # "Which restaurants in Albuquerque have an average review rating of at least 4 stars? Sort them from highest to lowest rating.",
+    # "What are the five most reviewed restaurants in Albuquerque, New Mexico, and what are their average ratings?",
+    # "Which Italian menu items have the highest review ratings in Albuquerque? Include their restaurants and prices.",
+    # "Show the restaurants near my Albuquerque location that have both vegan and vegetarian menu options.",
+    # "Which restaurants in Albuquerque have the lowest-priced vegan menu item, and what is that item?",
+    # "What do reviewers say about the vegan menu items at restaurants near Albuquerque, New Mexico? Include the restaurant, item, review title, and star rating.",
 ]
 
 
